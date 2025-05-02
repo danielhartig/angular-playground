@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@hartig/angular-features": ["libs/angular-features/src/index.ts"],
+      "@hartig/ui": ["libs/shared/ui/src/index.ts"],
+      "@hartig/usergroups": ["libs/usergroups/src/index.ts"],
+      "@hartig/users": ["libs/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,22 @@
+<mat-tab-group>
+  <mat-tab label="Control Flow Syntax">
+    @defer {
+      <lib-controlflow />
+    }
+  </mat-tab>
+  <mat-tab label="Deferrable View 1">
+    @defer (on viewport) {
+      <lib-deferrable-views />
+    } @placeholder {
+      <span>Not loaded yet</span>
+    }
+  </mat-tab>
+  <mat-tab label="Deferrable View 2">
+    @defer (on viewport) {
+      <lib-deferrable-views />
+      <lib-angular16-features label="Required Label" />
+    } @placeholder {
+      <span>Not loaded yet</span>
+    }
+  </mat-tab>
+</mat-tab-group>

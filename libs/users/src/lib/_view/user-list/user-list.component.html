@@ -1,0 +1,23 @@
+<table mat-table [dataSource]="items()" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="full-name">
+    <th mat-header-cell *matHeaderCellDef> Full name </th>
+    <td mat-cell *matCellDef="let element"> {{element.biography['full-name']}} </td>
+  </ng-container>
+  <ng-container matColumnDef="alignment">
+    <th mat-header-cell *matHeaderCellDef> Alignment </th>
+    <td mat-cell *matCellDef="let element"> {{element.biography.alignment}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row
+      *matRowDef="let row; columns: displayedColumns;"
+      (click)="selected.set(row)"
+      [class.selected]="selected()?.id === row.id"></tr>
+</table>

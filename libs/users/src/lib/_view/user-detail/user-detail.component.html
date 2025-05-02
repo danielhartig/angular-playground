@@ -1,0 +1,83 @@
+@let detail = hero();
+@if (detail) {
+  <h3>{{detail.id}}: {{detail.name}}</h3>
+  <img
+    [ngSrc]="detail.image.url"
+    width="240"
+    height="310"
+    [alt]="'image of ' + detail.name"
+    priority="true" style="float: right"/>
+
+  <h4>Biography</h4>
+  @let bio = detail.biography;
+  <dl>
+    <dt>full name</dt>
+    <dd>{{ bio['full-name'] }}</dd>
+    <dt>place of birth</dt>
+    <dd>{{bio['place-of-birth']}}</dd>
+    <dt>alter egos</dt>
+    <dd>{{bio['alter-egos']}}</dd>
+    <dt>aliases</dt>
+    <dd>{{bio['aliases']}}</dd>
+    <dt>first appearance</dt>
+    <dd>{{bio['first-appearance']}}</dd>
+    <dt>publisher</dt>
+    <dd>{{bio.publisher}}</dd>
+    <dt>alignment</dt>
+    <dd>{{bio.alignment}}</dd>
+  </dl>
+
+  <h4>Powerstats</h4>
+  @let pow = detail.powerstats;
+  <dl>
+    <dt>intelligence</dt>
+    <dd>{{ pow.intelligence }}</dd>
+    <dt>strength</dt>
+    <dd>{{pow.strength}}</dd>
+    <dt>speed</dt>
+    <dd>{{pow.speed}}</dd>
+    <dt>durability</dt>
+    <dd>{{pow.durability}}</dd>
+    <dt>power</dt>
+    <dd>{{pow.power}}</dd>
+    <dt>combat</dt>
+    <dd>{{pow.combat}}</dd>
+  </dl>
+
+  <h4>Appearance</h4>
+  @let app = detail.appearance;
+  <dl>
+    <dt>gender</dt>
+    <dd>{{ app.gender }}</dd>
+    <dt>race</dt>
+    <dd>{{ app.race }}</dd>
+    <dt>height</dt>
+    <dd>{{ app.height }}</dd>
+    <dt>weight</dt>
+    <dd>{{ app.weight }}</dd>
+    <dt>eye-color</dt>
+    <dd>{{ app['eye-color'] }}</dd>
+    <dt>hair-color</dt>
+    <dd>{{ app['hair-color'] }}</dd>
+  </dl>
+
+  <h4>Work</h4>
+  @let work = detail.work;
+  <dl>
+    <dt>occupation</dt>
+    <dd>{{ work.occupation }}</dd>
+    <dt>base</dt>
+    <dd>{{ work.base }}</dd>
+  </dl>
+
+  <h4>Connections</h4>
+  @let con = detail.connections;
+  <dl>
+    <dt>group-affiliation</dt>
+    <dd>{{ con['group-affiliation'] }}</dd>
+    <dt>relatives</dt>
+    <dd>{{ con.relatives }}</dd>
+  </dl>
+} @else {
+  No hero selected!
+}

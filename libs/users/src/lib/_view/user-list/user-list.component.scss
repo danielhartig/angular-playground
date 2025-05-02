@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+
+.hero-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.hero {
+  margin: 5px;
+}
+
+.selected {
+  background-color: lightcyan;
+}

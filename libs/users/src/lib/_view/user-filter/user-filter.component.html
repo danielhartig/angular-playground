@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Search for Superhero</mat-label>
+<input
+  matInput
+  type="text"
+  [ngModel]="searchterm()"
+  (ngModelChange)="changedSearchterm.set($event)" />
+</mat-form-field>

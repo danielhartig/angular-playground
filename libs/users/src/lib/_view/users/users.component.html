@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="container flex-row">
+    <div class="container mw-50">
+      <lib-user-filter [searchterm]="selectors.searchterm()" (searchtermChange)="changeSearchterm($event)" />
+    </div>
+    <div class="container mw-50">
+      <lib-user-count [max]="selectors.heroCount()" />
+      <lib-glitch-test />
+    </div>
+  </div>
+  <div class="container flex-row">
+    <div class="container mw-50">
+      <lib-user-list [items]="limitedHeroes()" [selected]="selectors.selectedHero()" (selectedChange)="select($event?.id)" style="min-width: 50%" />
+    </div>
+    <div class="container mw-50">
+      <lib-user-detail [hero]="selectors.selectedHero()" />
+    </div>
+  </div>
+</div>

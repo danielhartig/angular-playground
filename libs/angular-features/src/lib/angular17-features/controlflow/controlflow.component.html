@@ -1,0 +1,36 @@
+Counter: {{ counter() }}
+<p>{{ "@if" }}</p>
+@if (even()) {
+  Even
+} @else {
+  Odd
+}
+<p>{{ "@switch" }}</p>
+mod 3:
+@switch (counter() % 3) {
+  @case (1) {
+    Rest 1
+  }
+  @case (2) {
+    Rest 2
+  }
+  @default {
+    nothing
+  }
+}
+<p>{{ "@for" }}</p>
+<table>
+  @for (item of items; track item.objectId) {
+    <tr>
+      <td>{{ item.objectId }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.active }}</td>
+    </tr>
+  } @empty {
+    <tr>
+      <td>
+        No item in list.
+      </td>
+    </tr>
+  }
+</table>
