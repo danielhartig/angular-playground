@@ -15,7 +15,6 @@ import { MatInputModule } from '@angular/material/input';
 
   ],
   templateUrl: './angular18-features.component.html',
-  styleUrl: './angular18-features.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Angular18FeaturesComponent {

@@ -10,7 +10,6 @@ import { BehaviorSubject, interval, tap } from 'rxjs';
     CommonModule
   ],
   templateUrl: './angular16-features.component.html',
-  styleUrl: './angular16-features.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Angular16FeaturesComponent {

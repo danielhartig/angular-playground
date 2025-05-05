@@ -16,7 +16,6 @@ import { DeferrableViewsComponent } from './deferrable-views/deferrable-views.co
     Angular16FeaturesComponent
   ],
   templateUrl: './angular17-features.component.html',
-  styleUrl: './angular17-features.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Angular17FeaturesComponent {

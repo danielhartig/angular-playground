@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './deferrable-views.component.html',
-  styleUrl: './deferrable-views.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeferrableViewsComponent {

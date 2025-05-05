@@ -9,7 +9,6 @@ import { Angular18FeaturesComponent } from '../angular18-features/angular18-feat
   standalone: true,
   imports: [CommonModule, Angular16FeaturesComponent, Angular17FeaturesComponent, Angular18FeaturesComponent],
   templateUrl: './angular-features.component.html',
-  styleUrl: './angular-features.component.css',
 })
 export class AngularFeaturesComponent {
   // input from router data
