@@ -2,7 +2,10 @@
   "name": "@hartig/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build client-playground",
+    "test": "nx test client-playground"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
