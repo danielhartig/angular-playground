@@ -1,4 +1,4 @@
-import { JsonPipe, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { Superhero } from '../_domain/model/superhero.model';
 
@@ -6,7 +6,6 @@ import { Superhero } from '../_domain/model/superhero.model';
   selector: 'lib-user-detail',
   standalone: true,
   imports: [
-    JsonPipe,
     NgOptimizedImage
   ],
   templateUrl: './user-detail.component.html',
